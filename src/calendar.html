@@ -2,6 +2,8 @@
   <section class="au-animate">
     <h2>${heading}</h2>
     <button click.delegate="addEvent()">Add Event</button>
+    <button click.delegate="editEvent()">Edit Event</button>
+    <button click.delegate="deleteEvent()">Delete Event</button>
     <table>
       <thead>
         <th>Sunday</th>
@@ -14,16 +16,16 @@
       </thead>
       <tbody>
         <tr>
-          <td repeat.for="i of [1,2,3,4,5,6,7]">${i}</td>
+          <td repeat.for="i of [1,2,3,4,5,6,7]">${i}<br>${events[i]}</td>
         </tr>
         <tr>
-          <td repeat.for="i of [8,9,10,11,12,13,14]">${i}</td>
+          <td repeat.for="i of [8,9,10,11,12,13,14]">${i}<br>${events[i]}</td>
         </tr>
         <tr>
-          <td repeat.for="i of [15,16,17,18,19,20,21]">${i}</td>
+          <td repeat.for="i of [15,16,17,18,19,20,21]">${i}<br>${events[i]}</td>
         </tr>
         <tr>
-          <td repeat.for="i of [22,23,24,25,26,27,28]">${i}</td>
+          <td repeat.for="i of [22,23,24,25,26,27,28]">${i}<br>${events[i]}</td>
         </tr>
       </tbody>
     </table>

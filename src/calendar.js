@@ -7,12 +7,12 @@ export class Calendar {
     this.eventInitializer()
   }
   eventInitializer(){
-    for (var i = 1 ; i <29; i ++){
-      this.events[i]=''
+    for (var i = 1 ; i < 29; i++){
+      this.events[i] = ''
     }
   }
   errorHandler(day){
-    if (isNaN(day) || (day != parseInt(day, 10)) || day < 1 || day >29 ){
+    if (isNaN(day) || (day != parseInt(day, 10)) || day < 1 || day > 29){
       alert("Not a valid date")
       return false
     }
@@ -21,21 +21,21 @@ export class Calendar {
   addEvent() {
     var day = prompt("Date you would like to add an event to?", 1)
     if(this.errorHandler(day) && !this.events[day]){
-    var description = prompt("Event Title", "Job Interview")
-    this.events[day]=description
+      var description = prompt("Event Title", "Job Interview")
+      this.events[day] = description
     }
   }
   editEvent(){
-    var day = prompt("Date you would like to edit?", 1)
-    if(this.errorHandler(day) && this.events[day] ){
-    var description = prompt("Event Title", "Job Interview")
-    this.events[day]=description
+    var day = prompt("Date of event you would like to edit?", 1)
+    if(this.errorHandler(day) && this.events[day]){
+      var description = prompt("Event Title", "Job Interview")
+      this.events[day] = description
     }
   }
   deleteEvent() {
-    var day = prompt("Date you would like to delete?", 1)
+    var day = prompt("Date of event you would like to delete?", 1)
     if(this.errorHandler(day)){
-    this.events[day]=''
+      this.events[day] = ''
     }
   }
 }
